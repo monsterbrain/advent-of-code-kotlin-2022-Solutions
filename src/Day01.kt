@@ -1,7 +1,6 @@
 fun main() {
     fun part1MostCalories(input: List<String>): Int {
         var currentElfIndex = 0
-        var elfWithMaxCalories = 0
         var maxElfCalories = 0
 
         var elfCalorieCount = 0
@@ -10,7 +9,6 @@ fun main() {
                 if (elfCalorieCount > maxElfCalories) {
                     // println("elfCalorieCount $elfCalorieCount")
                     maxElfCalories = elfCalorieCount
-                    elfWithMaxCalories = currentElfIndex
                 }
 
                 // iterate next with calorie count reset
@@ -38,10 +36,6 @@ fun main() {
         println(calorieSumList)
         return calorieSumList.sortedDescending().take(3).sum()
     }
-
-    // test if implementation meets criteria from the description, like:
-    /*val testInput = readInput("Day01_test")
-    check(part1MostCalories(testInput) == 1)*/
 
     val input = readInput("Day01")
     println(part1MostCalories(input))
