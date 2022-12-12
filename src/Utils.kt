@@ -9,6 +9,12 @@ fun readInput(name: String) = File("src", "$name.txt")
     .readLines()
 
 /**
+ * Reads lines from the given input txt file.
+ */
+fun readInputSepByGap(name: String) = File("src", "$name.txt")
+    .readText().split("\r\n\r\n")
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
